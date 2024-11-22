@@ -1,0 +1,36 @@
+
+
+.custom-shape {
+    position: relative;
+    width: 175px;
+    height: 150px;
+    background-color: #015892;
+    clip-path: polygon(48% 47%, 84% 47%, 90% 60%, 83% 71%, 13% 71%, 7% 60%, 13% 47%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.border-span {
+    position: absolute;
+    width: 157px;
+    height: 130px;
+    margin-top: 3px;
+    clip-path: polygon(48% 47%, 84% 47%, 90% 60%, 83% 71%, 13% 71%, 7% 60%, 13% 47%);
+    background-color: white;
+}
+
+.text {
+    margin-top:15%;
+    padding: 7%;
+    z-index: 1;    
+    color: black;
+    text-decoration: none;
+    font-family: Verdana, Arial, system-ui, Helvetica, sans-serif;
+}
+.text:hover{
+   
+    text-decoration: none;
+    color: black;
+}

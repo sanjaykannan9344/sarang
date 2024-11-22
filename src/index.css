@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  max-width: 100%;
+  overflow: hidden;
+}
+:root {
+  --primary-dark: bg-blue-500;
+  /* --primary-light : #709dff; */
+  font-family: Verdana, Arial, system-ui, Helvetica, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+@layer base {
+  html {
+    /* @apply scroll-smooth */
+    min-height: 90vh;
+  }
+
+  noscrollbar {
+    @layer over-hidden;
+  }
+
+  li {
+    @apply p-4 text-sm;
+  }
+
+  button {
+    @apply px-4 py-1.5 border cursor-pointer rounded-lg font-semibold capitalize;
+  }
+
+  h2 {
+    @apply text-xl font-bold;
+  }
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
