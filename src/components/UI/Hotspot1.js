@@ -4,8 +4,6 @@ import "../Hotspot1/Hotspot.css";
 import Hotspot from "../Hotspot1/Hotspot";
 import BackButton from "./BackButton";
 
-
-
 const Hotspot1 = () => {
   const [hotspots, setHotspots] = useState([
     {
@@ -64,23 +62,21 @@ const Hotspot1 = () => {
 
   return (
     <>
-     <div className="flex justify-center items-center h-[100vh] md-h:h-[82vh] lg-h:h-[82.7vh] xl-h:h-[83.7vh] xl-h2:h-[84.5vh] xl-h3:h-[87.7vh] 2xl-h:h-[89.5vh] 2xl-h1:h-[87vh] 2xl-h2:h-[90.6vh] 2xl-h3:h-[89vh]  bg-gradient-to-bl from-slate-900 via-[#291e44] to-slate-900 overflow-hidden ">
-      <div>
-        <BackButton to={"../"} />
+      <div className="flex justify-center items-center h-[100vh] md-h:h-[82vh] lg-h:h-[82.7vh] xl-h:h-[83.7vh] xl-h2:h-[84.5vh] xl-h3:h-[87.7vh] 2xl-h:h-[89.5vh] 2xl-h1:h-[87vh] 2xl-h2:h-[90.6vh] 2xl-h3:h-[89vh]  bg-gradient-to-bl from-slate-900 via-[#291e44] to-slate-900 overflow-hidden ">
+        <div>
+          <BackButton to={"../"} />
+        </div>
+        <div className="container">
+          {hotspots.map((hotspot) => (
+            <Hotspot
+              key={hotspot.id}
+              id={hotspot.id}
+              position={hotspot}
+              toggleHotspot={toggleHotspot}
+            />
+          ))}
+        </div>
       </div>
-      <div className="container">
-      {hotspots.map((hotspot) => (
-        <Hotspot
-          key={hotspot.id}
-          id={hotspot.id}
-          position={hotspot}
-          toggleHotspot={toggleHotspot}
-        />
-      ))}
-    </div>
-      
-    </div>
-    
     </>
   );
 };
