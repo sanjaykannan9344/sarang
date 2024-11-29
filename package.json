@@ -1,14 +1,14 @@
 {
-  "name": "sarangcbt",
+  "name": "placepicker",
   "version": "0.1.0",
   "private": true,
   "main": "electron/main.js",
   "homepage": "./",
   "build": {
     "appId": "com.app.id",
-    "productName": "SARANG",
+    "productName": "places",
     "files": [
-      "build/**/*",
+      "build/*/",
       "electron/main.js",
       "package.json"
     ],
@@ -31,8 +31,8 @@
     "lodash": "^4.17.21",
     "lucide-react": "^0.331.0",
     "prop-types": "^15.8.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
     "react-image-viewer": "^0.1.0",
     "react-magnifier": "^3.0.4",
@@ -44,6 +44,7 @@
     "react-remove-scroll": "^2.5.9",
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
+    "react-text-to-speech": "^0.19.5",
     "react-text-transition": "^3.1.0",
     "react-transition-group": "^4.4.5",
     "react-zoom-pan-pinch": "^3.4.4",
@@ -52,15 +53,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "set PORT=5000 && react-scripts start",
-    "build": "react-scripts build",
-    "build-electron": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
     "electron:dev": "electron .",
-    "electron:start": "concurrently \"yarn start\" \"wait-on http://localhost:5000 && electron .\"",
-    "electron:build": "electron-builder ",
-    "electron:build:all": "yarn build-electron && electron-builder build --publish never -mwl"
+    "electron:start": "concurrently \"npm start\" \"wait-on http://localhost:5000 && electron .\"",
+    "electron:build": "electron-builder "
   },
   "eslintConfig": {
     "extends": [
@@ -81,12 +81,14 @@
     ]
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.19",
     "concurrently": "^8.2.2",
     "electron": "^30.0.0",
     "electron-builder": "^24.13.3",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3",
+    "vite": "^6.0.1",
     "wait-on": "^7.2.0"
   }
 }

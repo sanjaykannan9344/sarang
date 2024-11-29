@@ -20,6 +20,10 @@ export const menuList1 = [
         name: "Sarang Blockdiagram",
         path: `/`,
       },
+      {
+        name: "video",
+        path: `/Video`,
+      },
     ],
   },
   {

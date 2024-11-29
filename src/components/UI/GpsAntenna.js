@@ -31,31 +31,34 @@ export default function GpsAntenna() {
       <div>
         <img
           src="/Image/locatation_of_GPS_Antenna.png"
-          className="mt-10 p-10"
+          className=" mx-auto my-14 block max-w-4xl h-auto object-contain"
         />
-        <Bs1CircleFill
-          className="text-white -mt-44 mx-96 cursor-pointer"
-          size={30}
-          onClick={() => toggleHotspot(1)}
-        />
-        <Bs2CircleFill
-          className="text-white -mt-72 mx-80 cursor-pointer"
-          size={30}
-          onClick={() => toggleHotspot(2)}
-        />
-        <Bs3CircleFill
-          className="text-white mt-16 mx-96 cursor-pointer"
-          size={30}
-          onClick={() => toggleHotspot(3)}
-        />
+        <div className="">
+          <Bs1CircleFill
+            className="text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+            size={30}
+            onClick={() => toggleHotspot(1)}
+          />
+          <Bs2CircleFill
+            className="text-white absolute top-1/3 left-1/3 sm:top-1/3 sm:left-1/3 md:top-1/3 md:left-1/3 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+            size={30}
+            onClick={() => toggleHotspot(2)}
+          />
+          <Bs3CircleFill
+            className="text-white mt-16 mx-96 cursor-pointer"
+            size={30}
+            onClick={() => toggleHotspot(3)}
+          />
+        </div>
       </div>
+
       {selectedText && (
         <div
           className={`${getStyle(
             selectedText
           )} absolute bottom-10 left-1/2 transform -translate-x-1/2`}
         >
-          <p className="text-white text-lg sm:text-xl font-medium leading-relaxed">
+          <p className="text-white text- sm:text-xl font-medium leading-relaxed">
             {getDescription(selectedText)}
           </p>
         </div>

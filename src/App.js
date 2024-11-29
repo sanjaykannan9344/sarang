@@ -24,6 +24,7 @@ import Shelter from "./components/Shelter";
 import Hotspot from "./components/UI/Hotspot";
 import Hotspot1 from "./components/UI/Hotspot1";
 import GpsAntenna from "./components/UI/GpsAntenna";
+import Video from "./components/Video";
 export default function App() {
   return (
     <HashRouter>
@@ -50,6 +51,7 @@ export default function App() {
         <Route path="/Hotspot" element={<Hotspot />} />
         <Route path="/Hotspot1" element={<Hotspot1 />} />
         <Route path="/GpsAntenna" element={<GpsAntenna />} />
+        <Route path="/Video" element={<Video />} />
       </Routes>
       <Footer />
     </HashRouter>
