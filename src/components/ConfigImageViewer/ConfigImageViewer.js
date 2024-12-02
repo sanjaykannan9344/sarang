@@ -129,10 +129,10 @@ const ConfigImageViewer = () => {
                   <OrderedList data={contentItem.list} />
                 </li>
               )}
-               {contentItem.listtitle1 && (
+              {contentItem.listtitle1 && (
                 <li className="text-lg font-bold">{contentItem.listtitle1}</li>
               )}
-               {contentItem.list1 && (
+              {contentItem.list1 && (
                 <li className=" text-lg">
                   <OrderedList data={contentItem.list1} />
                 </li>
@@ -140,7 +140,7 @@ const ConfigImageViewer = () => {
               {contentItem.listtitle2 && (
                 <li className="text-lg font-bold">{contentItem.listtitle2}</li>
               )}
-               {contentItem.list2 && (
+              {contentItem.list2 && (
                 <li className=" text-lg">
                   <OrderedList data={contentItem.list2} />
                 </li>
@@ -149,10 +149,10 @@ const ConfigImageViewer = () => {
                 <li className="text-lg">{contentItem.subcontent}</li>
               )}
               {contentItem.subtitle && (
-                <li className=" text-lg font-bold">{contentItem.subtitle}</li>
+                <li className=" text-lg font-bold ">{contentItem.subtitle}</li>
               )}
               {contentItem.content1 && (
-                <li className=" text-lg">{contentItem.content1}</li>
+                <li className=" text-lg ">{contentItem.content1}</li>
               )}
               {contentItem.content2 && (
                 <li className=" text-lg">{contentItem.content2}</li>

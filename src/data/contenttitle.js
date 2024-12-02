@@ -120,11 +120,28 @@ export const GeneratorConfiguration = [
 // Actual image and content data
 export const subContent = [
   // Mechanical Data
+
   {
     id: 0,
     name: "Locatation of GPS Antenna",
-    content: "Locatation of GPS Antenna",
-
+    content: "GPS Antenna",
+    subtitle1: "S:NO:",
+    content1: "1",
+    content2: "2",
+    content3: "3",
+    content4: "4",
+    content5: "5",
+    content6: "6",
+    content7: "7",
+    content8: [
+      "Locatation",
+      "Platform structure",
+      "U-Bolts",
+      "Twist locks",
+      "Spare wheel with mounting assembly",
+      "Ladder",
+      "Mechanical Jacks – 4 No’s",
+    ],
     image: [
       {
         id: 1,
@@ -140,14 +157,14 @@ export const subContent = [
     id: 1,
     name: "CBS Antennna",
     content: "CBS Antennna",
-    // subtitle: "Assembly Comprises of the following:",
-    // content2: "(a)	Platform structure",
-    // content3: "(b)	U-Bolts",
-    // content4: "(c)	Twist locks",
-    // content5: "(d)	Spare wheel with mounting assembly",
-    // content6: "(e)	Ladder",
-    // content7: "(f)	Storage Boxes for foot plates, earth peg, jack handles, etc.",
-    // content8: "(g)	Mechanical Jacks – 4 No’s",
+    subtitle: "Assembly Comprises of the following:",
+    content2: "(a)	Platform structure",
+    content3: "(b)	U-Bolts",
+    content4: "(c)	Twist locks",
+    content5: "(d)	Spare wheel with mounting assembly",
+    content6: "(e)	Ladder",
+    content7: "(f)	Storage Boxes for foot plates, earth peg, jack handles, etc.",
+    content8: "(g)	Mechanical Jacks – 4 No’s",
 
     image: [
       {

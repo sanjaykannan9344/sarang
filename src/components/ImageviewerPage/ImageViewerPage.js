@@ -3,7 +3,7 @@ import ImageViewer from "../UI/ImageViewer";
 import { subContent } from "../../data/contenttitle";
 import "./ImageViewerPage.css";
 import { useParams } from "react-router-dom";
-import Table from "../UI/Table";
+
 import BackButton from "../UI/BackButton";
 import ImageLoader from "../UI/Loader/ImageLoader";
 
@@ -111,7 +111,7 @@ const ImageViewerPage = () => {
               : "h-[87.7vh] overflow-auto border-y-4 border-x-4 border-white cursor-text"
           }
         >
-          <div className=" sticky top-0 bottom-0 bg-[#291f41] p-3 border-b-4 border-white">
+          <div className=" sticky top-0 bottom-0 bg-[#291f41] p-3 border-r-4 border-white">
             <div className="text-center  text-white border-x-[#e5bbff] p-1 ring-offset-4 border-y-[#e5bbff] bg-[#100824] border-4 shadow-[1px_1px_4px_4px_rgba(165,_39,_255,_0.48)] ">
               <div className="border-1 p-1 shadow-[0px_0px_6px_6px_rgba(165,_39,_255,_0.48)]">
                 <p className=" text-lg font-semibold xl:text-base lg:text-sm">
@@ -120,14 +120,16 @@ const ImageViewerPage = () => {
               </div>
             </div>
           </div>
-          <div className=" text-black bg-[#FFF5EE] h-full px-3 text-justify  overflow-auto pb-10 ">
-            <ul className="list-none">
+          <div className=" text-black bg-violet-100 h-full px-3 text-justify  overflow-auto pb-10 ">
+            {/* <ul className="list-none">
               <li className=" text-lg pt-3">{contentItem.content}</li>
               {contentItem.subcontent && (
                 <li className=" text-lg">{contentItem.subcontent}</li>
               )}
               {contentItem.subtitle && (
-                <li className=" text-lg font-bold">{contentItem.subtitle}</li>
+                <li className=" text-lg text-white font-bold bg-[#291f41] p-3 border-r-4 text-cen border-rlack hover:bg-gray-700">
+                  {contentItem.subtitle}
+                </li>
               )}
               {contentItem.content1 && (
                 <li className=" text-lg">{contentItem.content1}</li>
@@ -152,9 +154,9 @@ const ImageViewerPage = () => {
               )}{" "}
               {contentItem.content8 && (
                 <li className=" text-lg">{contentItem.content8}</li>
-              )}
-              {/* Table Title */}
-              {contentItem.tabletitle && (
+              )} */}
+            {/* Table Title */}
+            {/* {contentItem.tabletitle && (
                 <li className=" text-lg pt-3 font-bold">
                   {contentItem.tabletitle}
                 </li>
@@ -163,14 +165,143 @@ const ImageViewerPage = () => {
                 <li className=" text-lg pt-3 ">{contentItem.tablesubtitle}</li>
               )}
               {/* Table */}
-              {contentItem.table && (
+            {/* {contentItem.table && (
                 <div className="mt-5 flex items-center justify-center">
                   <Table data={contentItem.table} />
                 </div>
               )}
               <p className=" text-lg font-bold">{contentItem.content9}</p>
               <p className=" text-lg">{contentItem.content10}</p>
-            </ul>
+            </ul>   */}
+            <div className="overflow-x-auto mt-20">
+              <p className=" text-lg text-white font-bold bg-[#291f41] p-3  text-center border-rlack hover:border-double border-4 border-violet-600">
+                {" "}
+                {contentItem.content}
+              </p>
+              <table className="min-w-full table-auto border-collapse  text-center border-double border-4 border-indigo-600 ">
+                <tbody>
+                  <tr className="hover:bg-violet-200">
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black bg-violet-300 ">
+                      {contentItem.content1}
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black">
+                      {contentItem.content8[0]}
+                    </td>
+                    <td className="px-6 py-4 text-sm border-r border-b border-black bg-violet-300">
+                      0.15
+                    </td>
+                    <td className="px-6 py-4 text-sm   border-r border-b border-black">
+                      0.15
+                    </td>
+                    <td className="px-6 py-4 text-sm   border-r border-b border-black bg-violet-300">
+                      0.15
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-violet-200">
+                    <td className="px-6 py-4 text-sm font-medium text-gray-900 border-r border-b border-black">
+                      {contentItem.content2}
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black">
+                      {contentItem.content8[1]}
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black">
+                      0.46
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black">
+                      0.46
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black">
+                      0.46
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-violet-200">
+                    <td className="px-6 py-4 text-sm font-medium text-gray-900 border-r border-b border-black bg-violet-300">
+                      {contentItem.content3}
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black">
+                      {contentItem.content8[2]}
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black bg-violet-300">
+                      0.21
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black">
+                      0.21
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black bg-violet-300">
+                      0.21
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-violet-200">
+                    <td className="px-6 py-4 text-sm font-medium text-gray-900 border-r border-b border-black">
+                      {contentItem.content4}
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black">
+                      {contentItem.content8[3]}
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black">
+                      0.25
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black">
+                      0.25
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black">
+                      0.25
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-violet-200">
+                    <td className="px-6 py-4 text-sm font-medium text-gray-900 border-r border-b border-black bg-violet-300">
+                      {contentItem.content5}
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black ">
+                      {contentItem.content8[4]}
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black bg-violet-300">
+                      0.68
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black">
+                      0.68
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black bg-violet-300">
+                      0.68
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-violet-200 ">
+                    <td className="px-6 py-4 text-sm font-medium text-gray-900 border-r border-b border-black">
+                      {contentItem.content6}
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black">
+                      {contentItem.content8[5]}
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black">
+                      0.31
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black">
+                      0.31
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black">
+                      0.31
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-violet-200 ">
+                    <td className="px-6 py-4 text-sm font-medium text-gray-900 border-r border-b border-black bg-violet-300">
+                      {contentItem.content7}
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black">
+                      {contentItem.content8[6]}
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black bg-violet-300">
+                      0.07
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black">
+                      0.07
+                    </td>
+                    <td className="px-6 py-4 text-sm  border-r border-b border-black bg-violet-300">
+                      0.07
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
