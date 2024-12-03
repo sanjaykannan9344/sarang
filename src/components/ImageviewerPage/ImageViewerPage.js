@@ -3,7 +3,7 @@ import ImageViewer from "../UI/ImageViewer";
 import { subContent } from "../../data/contenttitle";
 import "./ImageViewerPage.css";
 import { useParams } from "react-router-dom";
-
+import Table from "../UI/Table";
 import BackButton from "../UI/BackButton";
 import ImageLoader from "../UI/Loader/ImageLoader";
 
@@ -120,7 +120,7 @@ const ImageViewerPage = () => {
               </div>
             </div>
           </div>
-          <div className=" text-black bg-violet-100 h-full px-3 text-justify  overflow-auto pb-10 ">
+          <div className=" text-black bg-violet-100 h-full px-3 text-justify  overflow-y-auto pb-10 ">
             {/* <ul className="list-none">
               <li className=" text-lg pt-3">{contentItem.content}</li>
               {contentItem.subcontent && (
@@ -163,8 +163,8 @@ const ImageViewerPage = () => {
               )}
               {contentItem.tablesubtitle && (
                 <li className=" text-lg pt-3 ">{contentItem.tablesubtitle}</li>
-              )}
-              {/* Table */}
+              )} */}
+            {/* Table */}
             {/* {contentItem.table && (
                 <div className="mt-5 flex items-center justify-center">
                   <Table data={contentItem.table} />
@@ -172,13 +172,47 @@ const ImageViewerPage = () => {
               )}
               <p className=" text-lg font-bold">{contentItem.content9}</p>
               <p className=" text-lg">{contentItem.content10}</p>
-            </ul>   */}
-            <div className="overflow-x-auto mt-20">
-              <p className=" text-lg text-white font-bold bg-[#291f41] p-3  text-center border-rlack hover:border-double border-4 border-violet-600">
-                {" "}
-                {contentItem.content}
-              </p>
-              <table className="min-w-full table-auto border-collapse  text-center border-double border-4 border-indigo-600 ">
+            </ul> */}
+            <div>
+              <p className="mt-5">{contentItem.content0}</p>
+              <p className="sticky-paragraph mt-4"> {contentItem.content}</p>
+            </div>
+            <div>
+              <table className="table overflow-x-auto ">
+                <thead>
+                  <tr className="px-6 py-4 text-sm  border-r border-b border-black bg-violet-300">
+                    <th
+                      scope="col"
+                      className="px-6 py-4 text-sm  border-r border-b border-black bg-violet-300 "
+                    >
+                      S:No
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-4 text-sm  border-r border-b border-black bg-violet-300 "
+                    >
+                      Title
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-4 text-sm  border-r border-b border-black bg-violet-300 "
+                    >
+                      Latitude
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-4 text-sm  border-r border-b border-black bg-violet-300 "
+                    >
+                      Longitude
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-4 text-sm  border-r border-b border-black bg-violet-300 "
+                    >
+                      Altitude
+                    </th>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr className="hover:bg-violet-200">
                     <td className="px-6 py-4 text-sm  border-r border-b border-black bg-violet-300 ">
@@ -191,10 +225,10 @@ const ImageViewerPage = () => {
                       0.15
                     </td>
                     <td className="px-6 py-4 text-sm   border-r border-b border-black">
-                      0.15
+                      0.16
                     </td>
                     <td className="px-6 py-4 text-sm   border-r border-b border-black bg-violet-300">
-                      0.15
+                      0.17000000
                     </td>
                   </tr>
                   <tr className="hover:bg-violet-200">
@@ -205,13 +239,13 @@ const ImageViewerPage = () => {
                       {contentItem.content8[1]}
                     </td>
                     <td className="px-6 py-4 text-sm  border-r border-b border-black">
-                      0.46
+                      000.48
                     </td>
                     <td className="px-6 py-4 text-sm  border-r border-b border-black">
-                      0.46
+                      00000.46
                     </td>
                     <td className="px-6 py-4 text-sm  border-r border-b border-black">
-                      0.46
+                      000.47
                     </td>
                   </tr>
                   <tr className="hover:bg-violet-200">
@@ -222,13 +256,13 @@ const ImageViewerPage = () => {
                       {contentItem.content8[2]}
                     </td>
                     <td className="px-6 py-4 text-sm  border-r border-b border-black bg-violet-300">
-                      0.21
+                      0.22222
                     </td>
                     <td className="px-6 py-4 text-sm  border-r border-b border-black">
-                      0.21
+                      0.23456
                     </td>
                     <td className="px-6 py-4 text-sm  border-r border-b border-black bg-violet-300">
-                      0.21
+                      0.27894
                     </td>
                   </tr>
                   <tr className="hover:bg-violet-200">
@@ -239,13 +273,13 @@ const ImageViewerPage = () => {
                       {contentItem.content8[3]}
                     </td>
                     <td className="px-6 py-4 text-sm  border-r border-b border-black">
-                      0.25
+                      0.26354
                     </td>
                     <td className="px-6 py-4 text-sm  border-r border-b border-black">
-                      0.25
+                      0.27894
                     </td>
                     <td className="px-6 py-4 text-sm  border-r border-b border-black">
-                      0.25
+                      0.25963
                     </td>
                   </tr>
                   <tr className="hover:bg-violet-200">
@@ -256,13 +290,13 @@ const ImageViewerPage = () => {
                       {contentItem.content8[4]}
                     </td>
                     <td className="px-6 py-4 text-sm  border-r border-b border-black bg-violet-300">
-                      0.68
+                      0.68852
                     </td>
                     <td className="px-6 py-4 text-sm  border-r border-b border-black">
-                      0.68
+                      0.68741
                     </td>
                     <td className="px-6 py-4 text-sm  border-r border-b border-black bg-violet-300">
-                      0.68
+                      0.68123
                     </td>
                   </tr>
                   <tr className="hover:bg-violet-200 ">
@@ -273,13 +307,13 @@ const ImageViewerPage = () => {
                       {contentItem.content8[5]}
                     </td>
                     <td className="px-6 py-4 text-sm  border-r border-b border-black">
-                      0.31
+                      0.31654
                     </td>
                     <td className="px-6 py-4 text-sm  border-r border-b border-black">
-                      0.31
+                      0.310147
                     </td>
                     <td className="px-6 py-4 text-sm  border-r border-b border-black">
-                      0.31
+                      0.318520
                     </td>
                   </tr>
                   <tr className="hover:bg-violet-200 ">
@@ -290,13 +324,13 @@ const ImageViewerPage = () => {
                       {contentItem.content8[6]}
                     </td>
                     <td className="px-6 py-4 text-sm  border-r border-b border-black bg-violet-300">
-                      0.07
+                      0.079630
                     </td>
                     <td className="px-6 py-4 text-sm  border-r border-b border-black">
-                      0.07
+                      0.070349
                     </td>
                     <td className="px-6 py-4 text-sm  border-r border-b border-black bg-violet-300">
-                      0.07
+                      0.077610
                     </td>
                   </tr>
                 </tbody>

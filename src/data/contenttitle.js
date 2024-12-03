@@ -125,7 +125,9 @@ export const subContent = [
     id: 0,
     name: "Locatation of GPS Antenna",
     content: "GPS Antenna",
-    subtitle1: "S:NO:",
+    content0: [
+      "The location of GPS refers to the position of a device on Earth as determined by the Global Positioning System (GPS). GPS is a satellite-based navigation system that provides location and time information to a GPS receiver anywhere on or near the Earth. The system works by using a network of satellites orbiting the Earth that send signals to GPS receivers, which then calculate their position (latitude, longitude, and altitude).",
+    ],
     content1: "1",
     content2: "2",
     content3: "3",
@@ -153,18 +155,19 @@ export const subContent = [
       // { id: 4, name: "image4", url: "./Image/Mechanical/GO1A3056.png" },
     ],
   },
+
   {
     id: 1,
     name: "CBS Antennna",
     content: "CBS Antennna",
-    subtitle: "Assembly Comprises of the following:",
-    content2: "(a)	Platform structure",
-    content3: "(b)	U-Bolts",
-    content4: "(c)	Twist locks",
-    content5: "(d)	Spare wheel with mounting assembly",
-    content6: "(e)	Ladder",
-    content7: "(f)	Storage Boxes for foot plates, earth peg, jack handles, etc.",
-    content8: "(g)	Mechanical Jacks – 4 No’s",
+    // subtitle: "Assembly Comprises of the following:",
+    // content2: "(a)	Platform structure",
+    // content3: "(b)	U-Bolts",
+    // content4: "(c)	Twist locks",
+    // content5: "(d)	Spare wheel with mounting assembly",
+    // content6: "(e)	Ladder",
+    // content7: "(f)	Storage Boxes for foot plates, earth peg, jack handles, etc.",
+    // content8: "(g)	Mechanical Jacks – 4 No’s",
 
     image: [
       {
@@ -177,16 +180,17 @@ export const subContent = [
       // { id: 4, name: "image4", url: "./Image/Mechanical/GO1A3064.png" },
     ],
   },
+
   {
     id: 2,
     name: "Sectoral horn antenna",
     content: "Sectoral horn antenna",
-    // tabletitle: "Technical Specifications of the Flatbed Assy",
-    // table: [
-    //   { "Sl.No.": 1, Parameter: "No. of Jacks", Specifications: "04" },
-    //   { "Sl.No.": 2, Parameter: "Capacity", Specifications: "4 ton each" },
-    //   { "Sl.No.": 3, Parameter: "Stroke", Specifications: "795mm" },
-    // ],
+    tabletitle: "Technical Specifications of the Flatbed Assy",
+    table: [
+      { "Sl.No.": 1, Parameter: "No. of Jacks", Specifications: "04" },
+      { "Sl.No.": 2, Parameter: "Capacity", Specifications: "4 ton each" },
+      { "Sl.No.": 3, Parameter: "Stroke", Specifications: "795mm" },
+    ],
     image: [
       {
         id: 1,
